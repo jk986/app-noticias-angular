@@ -1,0 +1,25 @@
+.listado__titulo{
+    text-align: center;
+    margin-top: 5rem;
+    font-family: 'Roboto';
+    font-weight: 700;
+
+}
+.noticias__contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+/**Mayor o igual a. 
+----Se define el tamaño minimo que debe 
+tener el viewport para que se apliquen 
+los estilos
+**/
+@media (min-width:720px) {
+    .noticias__contenedor{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

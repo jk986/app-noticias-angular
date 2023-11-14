@@ -1,0 +1,11 @@
+<div class="formulario">
+    <form class="formulario__elementos" (submit)="onSubmit()">
+        <mat-form-field >
+            <mat-label>Categoría</mat-label>
+            <mat-select [(ngModel)]="categoriaSelec" name="category" >
+                <mat-option *ngFor="let category of categorias" [value]="category.value">{{category.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="accent" >Buscar Noticias</button>
+    </form>
+</div>

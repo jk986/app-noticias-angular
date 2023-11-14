@@ -1,0 +1,21 @@
+<h2 class="listado__titulo">Últimas Noticias</h2>
+<div class="noticias__contenedor">
+    <!-- <p *ngFor="let noticia of listNoticias">{{noticia}}</p> -->
+    <ng-container *ngFor="let notice of listNoticias" >
+        <app-noticia [noticia]="notice" *ngIf="listNoticias.length>0"></app-noticia>
+    </ng-container>
+    <!-- <nav aria-label="Page navigation example" *ngIf="listNoticias.length>0">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link active" ></a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav> -->
+    <mat-paginator 
+      (page)="cambiarPagina($event)"
+      [length]="paginasTotales"
+      [pageSize]="20"
+      [pageSizeOptions]="[20]"
+      aria-label="Select page">
+    </mat-paginator>
+</div>

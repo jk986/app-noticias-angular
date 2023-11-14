@@ -1,0 +1,22 @@
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.formulario__elementos{
+    display: inline-grid;
+    grid-column: 1/5;
+    grid-row: 1;
+}
+/**Mayor o igual a. 
+    ----Se define el tamaño minimo que debe 
+    tener el viewport para que se apliquen 
+    los estilos
+**/
+@media (min-width:720px) {
+    .formulario__elementos{
+        grid-column: 2/4;
+        align-items: center;
+    }
+}
